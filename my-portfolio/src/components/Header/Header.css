@@ -1,0 +1,80 @@
+/* 2. Header Base */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Keeps header above everything */
+  background: rgba(12, 14, 18, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 3. Container for alignment */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.header-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header-link {
+  text-decoration: none;
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Underline Hover Effect */
+.header-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #f0c35a;
+  transition: width 0.3s ease;
+}
+
+.header-link:hover {
+  color: #ffffff;
+}
+
+.header-link:hover::after {
+  width: 100%;
+}
+
+/* 4. Responsiveness */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 15px 20px;
+  }
+
+  .header-nav {
+    gap: 15px;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+}
