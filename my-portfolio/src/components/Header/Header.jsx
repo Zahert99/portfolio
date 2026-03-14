@@ -14,7 +14,7 @@ export default function Header() {
           <a href='#experience' className='header-link'>
             Experience
           </a>
-          <a href='#about' className='header-link'>
+          <a href='#aboutMe' className='header-link'>
             About
           </a>
           <a href='#contact' className='header-link'>
