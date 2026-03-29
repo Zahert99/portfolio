@@ -12,7 +12,13 @@ function Hero() {
         </a>
       </div>
       <div className='hero-image'>
-        <img src={Image} alt='Zaher Taeiara' />
+        <img
+          src={Image}
+          alt='Zaher Taeiara'
+          loading='eager'
+          decoding='async'
+          fetchPriority='high'
+        />
       </div>
     </div>
   );

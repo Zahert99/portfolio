@@ -1,61 +1,106 @@
+/* ============================================================
+   AboutMe.css
+   Two-column layout: text on the left, image on the right.
+   Switches to a single column on smaller screens.
+   ============================================================ */
+
 .about {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  padding: var(--section-padding);
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-mid) 0%,
+    var(--color-bg-dark) 100%
+  );
 }
 
 .about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 60px;
+  gap: 5rem;
   align-items: center;
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
+/* ── Section Heading ── */
 .about-text h2 {
-  font-size: 2.2rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  margin-bottom: 24px;
-  background: linear-gradient(135deg, #f8fafc 0%, #94a3b8 100%);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-text-primary) 0%,
+    var(--color-text-secondary) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* ── Body Text ── */
 .about-text p {
   font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 18px;
-  color: #cbd5e1;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 1.2rem;
 }
 
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Image ── */
 .about-highlights img {
   width: 100%;
   height: auto;
-  border-radius: 20px;
+  display: block;
+  border-radius: var(--card-radius);
+  border: 1px solid var(--color-border);
   object-fit: cover;
-  border: 1px solid rgba(148, 163, 184, 0.15);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-base);
 }
 
 .about-highlights img:hover {
-  transform: scale(1.03);
+  transform: scale(1.015);
 }
 
-/* responsive */
-
+/* ── Responsive ── */
 @media (max-width: 900px) {
   .about-container {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
+  /* Show image above text on mobile */
   .about-highlights {
     order: -1;
   }
 
   .about-highlights img {
-    max-height: 350px;
+    max-height: 320px;
+    object-position: center top;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: var(--section-padding-mobile);
+  }
+
+  .about-text p {
+    line-height: 1.72;
+  }
+
+  .about-highlights img:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-container {
+    gap: 1.8rem;
   }
 }

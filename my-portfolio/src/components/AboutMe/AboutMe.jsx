@@ -40,7 +40,7 @@ function AboutMe() {
         </div>
 
         <div className='about-highlights'>
-          <img src={Image} alt='About Me' />
+          <img src={Image} alt='About Me' loading='lazy' decoding='async' />
         </div>
       </div>
     </section>

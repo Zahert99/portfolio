@@ -1,16 +1,44 @@
-# React + Vite
+# Zaher Taeiara — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with **React 19** and **Vite**, showcasing my skills, projects, and experience as a frontend developer.
 
-Currently, two official plugins are available:
+## Live sections
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Section          | Description                                                      |
+| ---------------- | ---------------------------------------------------------------- |
+| **Hero**         | Introduction with a profile photo and a call-to-action           |
+| **Technologies** | Categorised skill cards: Frontend, Backend, Databases, and Tools |
+| **Projects**     | Selected work with thumbnails, descriptions, and GitHub links    |
+| **About Me**     | Background, goals, and a short personal intro                    |
+| **Experience**   | Timeline of roles and responsibilities                           |
+| **Contact**      | Email, phone, LinkedIn, and GitHub links                         |
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** + **Vite 7** — component-driven UI, fast dev server and optimised production build
+- **TypeScript** (Projects section) + **JSX** (all other components)
+- **Plain CSS** with design tokens via CSS custom properties — no CSS framework
+- **react-icons** for consistent iconography
+- **React.lazy + Suspense** — code-split below-the-fold sections for faster initial load
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+
+# Production build
+npm run build
+
+# Preview the production build locally
+npm run preview
+```
+
+## Contact
+
+- **Email:** Zaher.t99@gmail.com
+- **LinkedIn:** [zaher-taeiara](https://www.linkedin.com/in/zaher-taeiara-568282158/)
+- **GitHub:** [Zahert99](https://github.com/Zahert99)

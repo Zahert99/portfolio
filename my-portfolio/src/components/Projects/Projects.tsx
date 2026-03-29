@@ -1,4 +1,4 @@
-import "./Projects.css";
+import "./projects.css";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 function Projects() {
@@ -61,7 +61,12 @@ function Projects() {
           {projects.map((project, index) => (
             <div className='project-card' key={index}>
               <div className='project-image'>
-                <img src={project.image} alt={project.title} />
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading='lazy'
+                  decoding='async'
+                />
                 <div className='project-overlay'>
                   <div className='project-links'>
                     <a

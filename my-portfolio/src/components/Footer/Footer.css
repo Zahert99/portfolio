@@ -1,0 +1,112 @@
+/* ============================================================
+   Footer.css
+   Minimal footer that continues the design token system:
+   sits below ContactMe, uses the same dark palette, and
+   provides quick nav + social links.
+   ============================================================ */
+
+.footer {
+  background: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border);
+  padding: 3rem 5% 2rem;
+}
+
+.footer-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+/* ── Quick Nav ── */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 2rem;
+}
+
+.footer-nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-nav-link:hover {
+  color: var(--color-text-primary);
+}
+
+/* ── Divider ── */
+.footer-divider {
+  width: 100%;
+  max-width: 480px;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ── Bottom row ── */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Social icons ── */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  font-size: 1rem;
+  text-decoration: none;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.footer-social-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-border-hover);
+  background: rgba(59, 130, 246, 0.08);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .footer {
+    padding: 2.5rem 1.5rem 1.75rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-nav {
+    gap: 0.25rem 1.25rem;
+  }
+}
