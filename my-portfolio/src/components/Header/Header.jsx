@@ -1,11 +1,11 @@
 import "./Header.css";
-import ZTlogo from "../../assets/ztlogo.jpg";
+import ztlogo from "../../assets/ztlogo.jpg";
 export default function Header() {
   return (
     <header className='header'>
       <div className='header-container'>
         <div className='header-logo'>
-          <img src={ZTlogo} alt='Ziko Logo' className='logo-image' />
+          <img src={ztlogo} alt='Ziko Logo' className='logo-image' />
         </div>
 
         <nav className='header-nav'>
