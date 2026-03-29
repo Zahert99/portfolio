@@ -1,5 +1,5 @@
 import "./Header.css";
-import ZTlogo from "../../assets/ztlogo.jpg";
+import ZTlogo from "../../assets/ZTlogo.jpg";
 export default function Header() {
   return (
     <header className='header'>
